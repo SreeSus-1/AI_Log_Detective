@@ -1,0 +1,38 @@
+2026-07-06 09:58:41 INFO auth-service User login request received userId=U1023 requestId=REQ-1001
+2026-07-06 09:58:41 INFO auth-service Authentication successful userId=U1023 requestId=REQ-1001
+2026-07-06 09:58:42 INFO product-service Product search keyword="laptop" results=42 requestId=REQ-1002
+2026-07-06 09:58:45 INFO cart-service Item added cartId=C891 productId=P301 quantity=1 requestId=REQ-1003
+2026-07-06 09:58:47 INFO inventory-service Inventory verified productId=P301 available=15 requestId=REQ-1004
+2026-07-06 09:58:52 INFO payment-service Payment initiated orderId=O5001 amount=1499.99 requestId=REQ-1005
+2026-07-06 09:58:52 INFO db-service Connection requested poolSize=30 activeConnections=29
+2026-07-06 09:58:53 WARN db-service High database connection usage activeConnections=30 threshold=30
+2026-07-06 09:58:54 WARN db-service Waiting for free database connection
+2026-07-06 09:58:55 ERROR db-service Database connection timeout after 5000ms
+2026-07-06 09:58:55 WARN payment-service Database retry attempt=1 orderId=O5001
+2026-07-06 09:58:56 ERROR db-service Database connection timeout after 5000ms
+2026-07-06 09:58:56 WARN payment-service Database retry attempt=2 orderId=O5001
+2026-07-06 09:58:58 ERROR payment-service Unable to retrieve payment session orderId=O5001
+2026-07-06 09:58:58 ERROR api-gateway POST /checkout returned HTTP 500 requestId=REQ-1005
+2026-07-06 09:59:01 INFO monitoring-service Alert generated severity=HIGH incidentId=INC-2001
+2026-07-06 09:59:04 INFO auth-service User login request received userId=U1081 requestId=REQ-1006
+2026-07-06 09:59:04 INFO auth-service Authentication successful userId=U1081 requestId=REQ-1006
+2026-07-06 09:59:06 INFO product-service Product viewed productId=P412 requestId=REQ-1007
+2026-07-06 09:59:09 INFO cart-service Checkout started cartId=C892 requestId=REQ-1008
+2026-07-06 09:59:10 INFO payment-service Payment initiated orderId=O5002 amount=299.99 requestId=REQ-1008
+2026-07-06 09:59:10 WARN db-service High database connection usage activeConnections=30 threshold=30
+2026-07-06 09:59:11 ERROR db-service Database connection timeout after 5000ms
+2026-07-06 09:59:11 ERROR payment-service Payment authorization failed orderId=O5002
+2026-07-06 09:59:11 ERROR api-gateway POST /checkout returned HTTP 500 requestId=REQ-1008
+2026-07-06 09:59:14 WARN notification-service Email confirmation skipped orderId=O5002
+2026-07-06 09:59:17 INFO scheduler-service Background cleanup job started
+2026-07-06 09:59:22 INFO scheduler-service Removing idle database connections
+2026-07-06 09:59:24 INFO db-service Released idle connections released=8
+2026-07-06 09:59:25 INFO db-service Active connections reduced activeConnections=22
+2026-07-06 09:59:27 INFO payment-service Payment initiated orderId=O5003 amount=799.99 requestId=REQ-1009
+2026-07-06 09:59:27 INFO db-service Connection acquired successfully
+2026-07-06 09:59:28 INFO payment-service Payment authorization successful orderId=O5003
+2026-07-06 09:59:29 INFO notification-service Confirmation email sent orderId=O5003
+2026-07-06 09:59:30 INFO monitoring-service Incident status updated incidentId=INC-2001 status=Resolved
+2026-07-06 09:59:35 INFO analytics-service Sales dashboard updated
+2026-07-06 09:59:40 INFO inventory-service Inventory synchronized
+2026-07-06 09:59:45 INFO auth-service User logout userId=U1023
